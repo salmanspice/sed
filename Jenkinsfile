@@ -45,7 +45,8 @@ pipeline{
 				  cd /pipeline
                                  #sed -i -E 's/(.*PORT.*:).*/ \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
 				 #sed -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-                                  sed  -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+                                  #sed  -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+				  awk '/"PORT": "3000"/ {gsub("3000", "${env.WEBSITE_PORTS_UK}")} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
 				  
 	              """
 
