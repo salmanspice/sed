@@ -40,6 +40,7 @@ pipeline{
                  echo "BUILD_NUMBER = $BUILD_NUMBER"
                   echo "WEBSITE_PORTS_US =${env. WEBSITE_PORTS_US}"
 				  echo "SERVER_${env. WEBSITE_PORTS_US}"
+                                   echo "SERVER_${env. WEBSITE_PORTS_UK}"
 				  cd /pipeline
 				  
 	              """
