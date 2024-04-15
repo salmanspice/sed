@@ -5,7 +5,7 @@ pipeline{
 
  environment {
         PM2_ECOSYSTEM_CONFIGS_US = "ecosystem.config.cjs"
-        PM2_ECOSYSTEM_CONFIGS_UK = "ecosystem.config.js"
+        PM2_ECOSYSTEM_CONFIGS_UK = "ecosystem.config.cjs"
         PM2_ECOSYSTEM_CONFIGS_DE = "ecosystem.config.js"
         PM2_ECOSYSTEM_CONFIGS_ES = "ecosystem.config.js"
         PM2_ECOSYSTEM_CONFIGS_FR = "ecosystem.config.cjs"
