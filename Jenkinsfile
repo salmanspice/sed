@@ -43,7 +43,7 @@ pipeline{
                                    echo "SERVER_${env. WEBSITE_PORTS_UK}"
 				   echo "SERVER_${env. WEBSITE_PORTS_FR}"
 				  cd /pipeline
-                                 sed -i -E 's/(.*PORT.*:).*/\1 \${env.WEBSITE_PORT_UK}\,/g' ${env.PM2_ECOSYSTEM_CONFIGS_US}
+                                 sed -i -E 's/(.*PORT.*:).*/\1 ${env.WEBSITE_PORT_UK},/g' ${env.PM2_ECOSYSTEM_CONFIGS_US}
 				  
 	              """
 
