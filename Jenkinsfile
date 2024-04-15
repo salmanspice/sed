@@ -43,6 +43,7 @@ pipeline{
                                    echo "SERVER_${env. WEBSITE_PORTS_UK}"
 				   echo "SERVER_${env. WEBSITE_PORTS_FR}"
 				  cd /pipeline
+                                  cat ecosystem.config.cjs 
 				  
 	              """
 
