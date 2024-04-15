@@ -44,7 +44,8 @@ pipeline{
 				   echo "SERVER_${env. WEBSITE_PORTS_FR}"
 				  cd /pipeline
                                  #sed -i -E 's/(.*PORT.*:).*/ \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-				 sed -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+				 #sed -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+                                  sed -i -E 's/(.*PORT.*: )3000(.*)/\1"${env.WEBSITE_PORTS_UK}"\2/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
 				  
 	              """
 
