@@ -41,7 +41,7 @@ pipeline{
                   echo "WEBSITE_PORTS_US =${env. WEBSITE_PORTS_US}"
 				  echo "SERVER_${env. WEBSITE_PORTS_US}"
                                    echo "SERVER_${env. WEBSITE_PORTS_UK}"
-				   echo "SERVER_${env. WEBSITE_PORTS_DE}"
+				   echo "SERVER_${env. WEBSITE_PORTS_FR}"
 				  cd /pipeline
 				  
 	              """
