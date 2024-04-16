@@ -40,6 +40,21 @@ pipeline{
     //     scmUrl = 'https://github.com/salmanspice/SimpleNodeJSAppForJenkins.git'
               }
 	stages{
+		stage("Pipeline Derails"){
+			steps{
+				sh """
+            echo "BRANCH_NAME = ${env.BRANCH_NAME}"
+             echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
+             echo "JOB_NAME = ${env.JOB_NAME}"
+             echo "EXECUTOR_NUMBER = ${env.EXECUTOR_NUMBER}"
+             echo "WORKSPACE = ${env.WORKSPACE}"
+             echo "GIT_BRANCH = ${env.GIT_BRANCH}"
+             echo "GIT_URL = ${env.GIT_URL}"
+	     """
+        
+			}
+		}
+	stages{
 		stage("List env vars"){
 			steps{
 				sh "printenv | sort"
