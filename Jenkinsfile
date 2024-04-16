@@ -45,14 +45,13 @@ pipeline{
 		stage("Pipeline Derails"){
 			steps{
 				sh """
-            echo "BRANCH_NAME = ${env.BRANCH_NAME}"
-             echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
-             echo "JOB_NAME = ${env.JOB_NAME}"
-             echo "EXECUTOR_NUMBER = ${env.EXECUTOR_NUMBER}"
-             echo "WORKSPACE = ${env.WORKSPACE}"
-             echo "GIT_BRANCH = ${env.GIT_BRANCH}"
-             echo "GIT_URL = ${env.GIT_URL}"
-	     """
+             echo "The current branch name  is ${env.BUILD_NUMBER}"
+             echo "The current Build number  is ${env.BUILD_NUMBER}"
+             echo "The current Job Name   is ${env.JOB_NAME}"
+             echo "The current Workspace  is ${env.WORKSPACE}"
+             echo "The current git branch  is ${env.GIT_BRANCH}"
+             echo "The current git URL  is ${env.GIT_URL}"
+	     """ 
         
 			}
 		}
