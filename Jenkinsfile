@@ -46,7 +46,7 @@ pipeline{
 		stage("Pipeline Details"){
 			steps{
 				sh """
-             echo "The current branch name  is ${env.BUILD_NUMBER}"
+             echo "The current branch name  is ${env.BRANCH_NAME}"
              echo "The current Build number  is ${env.BUILD_NUMBER}"
              echo "The current Job Name   is ${env.JOB_NAME}"
              echo "The current Workspace  is ${env.WORKSPACE}"
