@@ -39,7 +39,6 @@ pipeline{
     //     branch = 'main'
     //     scmUrl = 'https://github.com/salmanspice/SimpleNodeJSAppForJenkins.git'
               }
-	stages{
 		
 	stages{
 
@@ -86,5 +85,5 @@ pipeline{
 		}
 	}
 
-}
+
 }
