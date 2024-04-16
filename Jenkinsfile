@@ -2,16 +2,7 @@ pipeline{
 	 agent { 
                 label 'linux'
             }
-	script {
-		
-             echo "The current branch name  is ${env.BUILD_NUMBER}"
-             echo "The current Build number  is ${env.BUILD_NUMBER}"
-             echo "The current Job Name   is ${env.JOB_NAME}"
-             echo "The current Workspace  is ${env.WORKSPACE}"
-             echo "The current git branch  is ${env.GIT_BRANCH}"
-             echo "The current git URL  is ${env.GIT_URL}"
 	
-		}
 
  environment {
         WEBSITE_SERVER="/server/entry.express.js"
@@ -52,7 +43,7 @@ pipeline{
 		
 	stages{
 
-		stage("Pipeline Derails"){
+		stage("Pipeline Details"){
 			steps{
 				sh """
              echo "The current branch name  is ${env.BUILD_NUMBER}"
