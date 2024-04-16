@@ -40,6 +40,9 @@ pipeline{
     //     scmUrl = 'https://github.com/salmanspice/SimpleNodeJSAppForJenkins.git'
               }
 	stages{
+		
+	stages{
+
 		stage("Pipeline Derails"){
 			steps{
 				sh """
@@ -52,12 +55,6 @@ pipeline{
              echo "GIT_URL = ${env.GIT_URL}"
 	     """
         
-			}
-		}
-	stages{
-		stage("List env vars"){
-			steps{
-				sh "printenv | sort"
 			}
 		}
 		stage("Using env vars"){
@@ -89,4 +86,5 @@ pipeline{
 		}
 	}
 
+}
 }
