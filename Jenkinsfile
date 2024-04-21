@@ -76,7 +76,7 @@ pipeline{
 			
 			  sed -i 's|www.printerpix.com/server/entry.express.js|${env.WEBSITE_APP_UK}|g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"  #best
                            
-                         sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"#best
+                         sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
 
 
       
