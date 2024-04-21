@@ -73,7 +73,7 @@ pipeline{
 				  cd /pipeline 
                         #sed -i -E 's/name: "www.printerpix.com"/name: "${env.WEBSITE_FOLDERS_UK}"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
 	                       
-			 sed -i -E 's/script: "$WEBSITE_SERVER"/script: "${env.WEBSITE_APP_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" 
+			 sed -i -E 's/script: "/var/www/www.printerpix.com${env.WEBSITE_SERVER}"/script: "${env.WEBSITE_APP_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" 
                          #sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"#best
 
 
