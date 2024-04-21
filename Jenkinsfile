@@ -71,13 +71,12 @@ pipeline{
 				   #echo "SERVER_${env. WEBSITE_PORTS_FR}"
                    echo "${env.WEBSITE_APP_US}"
 				  cd /pipeline 
-                        #sed -i -E 's/name: "www.printerpix.com"/name: "${env.WEBSITE_FOLDERS_UK}"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
+                        sed -i -E 's/name: "www.printerpix.com"/name: "${env.WEBSITE_FOLDERS_UK}"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
 	                       
-			 ##sed -i -E 's/.*script.*:/script: \"${env.WEBSITE_APP_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" 
-                          #sed -i -E "s/(.*script.*:).*/\1 \"${env.WEBSITE_APP_UK}\",/g" "${env.PM2_ECOSYSTEM_CONFIGS_UK}" 
-			  sed -i 's|www.printerpix.com/server/entry.express.js|${env.WEBSITE_APP_UK}|g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+			
+			  sed -i 's|www.printerpix.com/server/entry.express.js|${env.WEBSITE_APP_UK}|g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"  #best
                            
-                         #sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"#best
+                         sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"#best
 
 
       
