@@ -63,33 +63,23 @@ pipeline{
             }
 			steps{
 				sh """
-				#echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
-                 #echo "BUILD_NUMBER = $BUILD_NUMBER"
-                  #echo "WEBSITE_PORTS_US =${env. WEBSITE_PORTS_US}"
-				  #echo "SERVER_${env. WEBSITE_PORTS_US}"
-                                   #echo "SERVER_${env. WEBSITE_PORTS_UK}"
-				   #echo "SERVER_${env. WEBSITE_PORTS_FR}"
-                   echo "${env.WEBSITE_APP_US}"
+				    echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
+                                    echo "BUILD_NUMBER = $BUILD_NUMBER"
+                                    echo "WEBSITE_PORTS_US =${env. WEBSITE_PORTS_US}"
+				    echo "SERVER_${env. WEBSITE_PORTS_US}"
+                                    echo "SERVER_${env. WEBSITE_PORTS_UK}"
+				    echo "SERVER_${env. WEBSITE_PORTS_FR}"
+                                    echo "${env.WEBSITE_APP_US}"
 				  cd /pipeline 
                         #sed -i -E 's/name: "www.printerpix.com"/name: "${env.WEBSITE_FOLDERS_UK}"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
-	                       
-			
-			  #sed -i 's|www.printerpix.com/server/entry.express.js|${env.WEBSITE_APP_UK}|g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"  #best
-                           
-                         sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
+	                #sed -i 's|www.printerpix.com/server/entry.express.js|${env.WEBSITE_APP_UK}|g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"  #best
+                        sed -i -E 's/"PORT":  "3000"/"PORT":  "${env.WEBSITE_PORTS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"    #best
 
 
       
-                                 #sed -i -E 's/(.*PORT.*:).*/ \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-				 #sed -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-                                  #sed  -i -E 's/(.*PORT.*:).*/\1 \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-				  #sed -i -E 's/(.*PORT=.*:).*/\1  \"${env.WEBSITE_PORTS_UK}\",/g' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-                               #sed -i -E 's/"name": "www.printerpix.com"/"name":  "${env.WEBSITE_FOLDERS_UK}\"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-			        #sed -i -E 's/name: "www.printerpix.com"/name: "${env.WEBSITE_FOLDERS_UK}"/' "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-				  #awk '/"PORT": "3000"/ {gsub("3000", "${env.WEBSITE_PORTS_UK}")} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-                   #awk '/"name": "www.printerpix.com",/ {gsub("www.printerpix.com", "${env.WEBSITE_FOLDERS_UK}")} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
-		   
-     #awk -F ',' -v new="${env.WEBSITE_FOLDERS_UK}" '/"name": "www.printerpix.com"/ {gsub("www.printerpix.com", new)} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}.tmp" && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}.tmp" "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+   #awk '/"PORT": "3000"/ {gsub("3000", "${env.WEBSITE_PORTS_UK}")} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
+   #awk '/"name": "www.printerpix.com",/ {gsub("www.printerpix.com", "${env.WEBSITE_FOLDERS_UK}")} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}".tmp "${env.PM2_ECOSYSTEM_CONFIGS_UK}"                                                                                                        
+   #awk -F ',' -v new="${env.WEBSITE_FOLDERS_UK}" '/"name": "www.printerpix.com"/ {gsub("www.printerpix.com", new)} 1' "${env.PM2_ECOSYSTEM_CONFIGS_UK}" > "${env.PM2_ECOSYSTEM_CONFIGS_UK}.tmp" && mv "${env.PM2_ECOSYSTEM_CONFIGS_UK}.tmp" "${env.PM2_ECOSYSTEM_CONFIGS_UK}"
 
 				  
 	              """
@@ -100,3 +90,4 @@ pipeline{
 
 
 }
+   
